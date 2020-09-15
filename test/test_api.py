@@ -1,7 +1,7 @@
 """
 Unit tests for the weaterapp.api module.
 """
-from weatherapp.api import lookup_location, SMHIForecast
+from weather_app.api import lookup_location, SMHIForecast
 
 def test_lookup_location():
     """
