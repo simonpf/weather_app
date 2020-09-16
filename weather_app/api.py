@@ -11,11 +11,15 @@ import json
 import urllib
 import urllib.request
 
-SMHI_REQUEST_URL = ("https://opendata-download-metfcst.smhi.se/api/category/pmp3g/"
-                    "version/2/geotype/point/lon/{lon}/lat/{lat}/data.json")
+SMHI_REQUEST_URL = (
+    "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/"
+    "version/2/geotype/point/lon/{lon}/lat/{lat}/data.json"
+)
+
 
 def _parse_time(time):
     return datetime.datetime.fromisoformat(time[:-1])
+
 
 def lookup_location():
     """
@@ -34,6 +38,7 @@ def lookup_location():
     coordinates = data["loc"]
     lat, lon = coordinates.split(",")
     return float(lat), float(lon)
+
 
 class SMHIForecast:
     """

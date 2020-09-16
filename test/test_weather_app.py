@@ -1,7 +1,10 @@
 """Tests for the weather_app main module."""
 from datetime import datetime
+import numpy as np
+
 from weather_app.api import lookup_location, SMHIForecast
 from weather_app import get_temperature_forecast
+
 
 def test_temperature_forecast():
     """
