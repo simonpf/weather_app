@@ -15,7 +15,7 @@ def test_temperature_forecast():
     lat, lon = lookup_location()
     forecast = SMHIForecast(lat, lon)
 
-    t_0 = (forecast.time[0] - forecast.reference_time).total_seconds() / 3600
+    t_0 = (forecast.time[1] - forecast.reference_time).total_seconds() / 3600
     t_1 = (forecast.time[5] - forecast.reference_time).total_seconds() / 3600
 
     hours = np.linspace(t_0, t_1, randint(2, 20))
