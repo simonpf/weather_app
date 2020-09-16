@@ -21,5 +21,5 @@ def test_temperature_forecast():
     hours = np.linspace(0, dt, randint(2, 20))
     temperature_forecast = get_temperature_forecast(hours)
 
-    assert temperature_forecast[0] = forecast.temperature[1]
-    assert temperature_forecast[-1] = forecast.temperature[5]
+    assert temperature_forecast[0] == forecast.temperature[1]
+    assert temperature_forecast[-1] == forecast.temperature[5]
