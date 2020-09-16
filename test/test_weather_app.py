@@ -15,13 +15,10 @@ def test_temperature_forecast():
     forecast = SMHIForecast(lat, lon)
 
     now = datetime.now()
-    t_0 = forecast.time[1]
-    dt_0 = (t_0 - now).total_seconds() / 3600
+    t_0 = (forecast.time[0] - now).total_seconds() / 3600
+    t_1 = (forecast.time[5] - now).total_seconds() / 3600
 
-    t_1 = forecast.time[5]
-    dt_1 = (t_1 - now).total_seconds() / 3600
-
-    hours = np.linspace(0, dt, randint(2, 20))
+    hours = np.linspace(t_0, t_1, randint(2, 20))
     temperature_forecast = get_temperature_forecast(hours)
 
     assert temperature_forecast[0] == forecast.temperature[1]
