@@ -1,5 +1,6 @@
 """
 Python interface for SMHI forecast API.
+=======================================
 
 This module contains the SMHIForecast class, which provides access to
 to the SMHI forecast web API. Furthermore, the module provides the
@@ -10,6 +11,7 @@ import datetime
 import json
 import urllib
 import urllib.request
+import numpy as np
 
 SMHI_REQUEST_URL = (
     "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/"
@@ -47,7 +49,6 @@ class SMHIForecast:
     This class provides an interfact to the current SMHI weather forecast.
     A single forecast contains predictions for the next 10 days at varying
     temporal resolution.
-
 
     Attributes:
         reference_time(datetime.datetime): The time at which the forecast
@@ -111,3 +112,32 @@ class SMHIForecast:
         self.lon = longitude
         self.__make_request__()
         self.__parse_forecast__()
+
+    def interpolate(self, hours, variable = "temperature"):
+        """
+        Interpolate forecast variable to given times.
+
+        Params:
+            hours(1D array): 1-dimensional array containing the time in hours after
+            the forecasts reference time.
+            variable(str): String containing the attribute name to interpolate
+            to the given times.
+
+        Returns:
+            1D array containing the predicted values of the variable for the given
+            times.
+
+        Throws:
+            ValueError when the variable is not an attribute of the SMHIForecast
+            class
+        """
+        try:
+            y = getattr(self, variable)
+        except:
+            raise ValuError(f"'{variable}' is not an attribute of SMHIForecast.")
+
+        x = np.array([(t - self.reference_time).total_seconds() / 3600 for t in self.time])
+        return np.interp(hours, x, y)
+
+
+
