@@ -72,6 +72,7 @@ class SMHIForecast:
             response = urllib.request.urlopen(url)
         except:
             url = SMHI_REQUEST_URL.format(lat=57.42, lon=11.58)
+            response = urllib.request.urlopen(url)
         self.data = json.loads(response.read())
 
     def __parse_forecast__(self):
