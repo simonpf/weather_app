@@ -20,7 +20,8 @@ SMHI_REQUEST_URL = (
 
 
 def _parse_time(time):
-    return datetime.datetime.fromisoformat(time[:-1])
+    format = "%Y-%m-%dT%H:%M:%SZ"
+    return datetime.datetime.strptime(time, format)
 
 
 def lookup_location():
