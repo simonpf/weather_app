@@ -4,8 +4,10 @@ jobs:
   install_and_test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hi"
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
+        with:
+        python-version: '3.6'
+    architecture: 'x64
       - run: pip install .
       - run: pytest
