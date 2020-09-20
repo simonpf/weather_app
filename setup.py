@@ -15,6 +15,9 @@ setuptools.setup(
     url="https://github.com/simonpf/weatherapp",
     packages=setuptools.find_packages(), # Searches modules in current directory.
     python_requires='>=3.6',
+    install_requires=[
+        "numpy"
+    ]
     entry_points={
         "console_scripts": [
             "smhpy=weather_app.app:smhpy"
