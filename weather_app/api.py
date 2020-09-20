@@ -67,7 +67,10 @@ class SMHIForecast:
     def __make_request__(self):
         """Requests forecast from SMHI opendata."""
         url = SMHI_REQUEST_URL.format(lat=self.lat, lon=self.lon)
-        response = urllib.request.urlopen(url)
+        try:
+            response = urllib.request.urlopen(url)
+        except:
+            url = SMHI_REQUEST_URL.format(57.42, 11.58)
         self.data = json.loads(response.read())
 
     def __parse_forecast__(self):
