@@ -21,7 +21,7 @@ def get_temperature_forecast(hours):
     Returns:
         Array containing the predicted temperatures.
     """
-    lat, lon = api.lookup_coordinates()
+    lat, lon = api.lookup_location()
     forecast = api.SMHIForecast(lat, lon)
     return forecast.interpolate(hours, "temperature")
 
@@ -40,6 +40,6 @@ def get_precipitation_forecast():
     Returns:
         Array containing the predicted temperatures.
     """
-    lat, lon = api.lookup_coordinates()
+    lat, lon = api.lookup_location()
     forecast = api.SMHIForecast(lat, lon)
     return forecast.interpolate(hours, "precipitation")
