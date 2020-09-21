@@ -59,6 +59,9 @@ class AsciiGraph:
         self.grid[0, start] = self.precipitation_marker
         self.__write__(0, start + 1, s)
 
+        self.t_limits = None
+        self.p_limits = None
+
 
     def __write__(self, i, j, what):
         for k, c in enumerate(what):
