@@ -59,6 +59,9 @@ class AsciiGraph:
         self.grid[0, start] = self.precipitation_marker
         self.__write__(0, start + 1, s)
 
+        self.t_limits = None
+        self.p_limits = None
+
 
     def __write__(self, i, j, what):
         for k, c in enumerate(what):
@@ -122,7 +125,7 @@ class AsciiGraph:
         x = np.array(x)
         y = np.array(y)
         p_min = 0.0
-        p_max = 10.0
+        p_max = 5.0
         self.p_limits = (p_min, p_max)
         n = self.J_MAX - self.J_ZERO
         m = self.I_ZERO - self.I_MAX
