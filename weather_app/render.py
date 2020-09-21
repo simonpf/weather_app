@@ -1,11 +1,12 @@
 """
-ASCII plots
-===========
+The weather_app.render module
+=============================
 
-The :code:`render.py` module provides the AsciiGraph class, which can be used
- to plot temperature and precipitation time series to the command line.
+The :code:`wether_app.render` module provides functionality to render weather
+forecast data as ASCII plots. All functionality is implemented by the
+AsciiGraph class.
+
 """
-
 import numpy as np
 
 _RED = '\033[31m'

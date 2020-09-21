@@ -1,6 +1,6 @@
 """
-Python interface for SMHI forecast API.
-=======================================
+The weather_app.api module
+==========================
 
 This module contains the SMHIForecast class, which provides access to
 to the SMHI forecast web API. Furthermore, the module provides the
@@ -52,10 +52,10 @@ class SMHIForecast:
     temporal resolution.
 
     Attributes:
-        reference_time(datetime.datetime): The time at which the forecast
-            was produced.
+        reference_time(datetime.datetime): The time at which the forecast was
+        produced.
         time(list): The times, given as datetime.datetime objects, of the
-                    predictions in this forecasts.
+        predictions in this forecasts.
         temperature(list): The predicted temperature in deg. C.
         cloud_cover(list): The predicted cloud cover given as fraction in [0, 1].
         precipitation(list): The predicted mean precipitation intensity in mm/h.
