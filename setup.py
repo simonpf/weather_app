@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="weather_app_simon",
-    version="0.0.1",
+    version="0.0.2",
     author="Simon Pfreundschuh",
     author_email="simon.pfreundschuh@chalmers.se",
     description="My first package.",
