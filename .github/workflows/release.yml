@@ -1,6 +1,6 @@
 name: install_and_test
 on:
-  create:
+  push:
     tags:
       - '*'
 jobs:
