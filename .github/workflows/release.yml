@@ -1,4 +1,4 @@
-name: install_and_test
+name: release
 on:
   push:
     tags:
