@@ -7,6 +7,6 @@ API.
 
 ## Documentation
 
-Documentation can be found [here](https://simonpf.github.com/weather_app_solution)
+Online documentation can be found [here](https://simonpf.github.com/weather_app_solution).
 
 
