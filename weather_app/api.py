@@ -60,7 +60,7 @@ class SMHIForecast:
         cloud_cover(list): The predicted cloud cover given as fraction in [0, 1].
         precipitation(list): The predicted mean precipitation intensity in mm/h.
         symbol(list): Symbolic representation of weather situtation. See
-             opendata.smhi.se_ for reference.
+        opendata.smhi.se_ for reference.
 
 .. _opendata.smhi.se: https://opendata.smhi.se/apidocs/metfcst/parameters.html#27symbols
     """

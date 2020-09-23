@@ -4,7 +4,7 @@ The weather_app module
 
 The ``weather_app`` module provides a high-level interface to the SMHI forecast.
 The module currently provides function to access the temperature and the
- precipitation forecast data. Accessing the weather forecast requires an active
+precipitation forecast data. Accessing the weather forecast requires an active
 internet connection. The forecast location is determined automatically based on
 location lookup of the internet access point.
 
