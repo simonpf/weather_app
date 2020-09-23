@@ -3,10 +3,9 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-
 setuptools.setup(
-    name="weather_app_simon",
-    version="0.0.2",
+    name="smhpy",
+    version="0.1",
     author="Simon Pfreundschuh",
     author_email="simon.pfreundschuh@chalmers.se",
     description="My first package.",
