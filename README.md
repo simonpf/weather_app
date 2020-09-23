@@ -1,4 +1,4 @@
-![install and test](https://github.com/simonpf/weather_app_solutions/workflows/install_and_test/badge.svg)
+![install and test](https://github.com/simonpf/weather_app_solution/workflows/install_and_test/badge.svg)
 
 # The `weather_app` package
 
